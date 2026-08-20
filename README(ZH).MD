@@ -36,6 +36,7 @@ License: [MIT License](LICENSE)
 2. **电源供应**：若错误码显示 -6.6，表示电机未上电。请接入 24V 电源到 XT30 接口。
 3. **断电重启校准**：电机断电重启后需要重新校准。重新上电前请移除夹爪中间的物块。
 4. **断电延迟**：电机断电后，至少等待 3 秒再次上电。避免在短时间内频繁切断/接通电源，以防电机损伤。
+5. **更换夹爪后重新初始化**：更换不同型号夹爪后，请重新对 USB 串口或电机供电接口执行断电再上电，这样可确保夹爪重新校准正确的零点。
 
 ## 3 快速开始
 
@@ -264,4 +265,3 @@ python3 scripts/camera_cmd.py right VERSION
 | 主入口脚本        | [start_gripper.py](start_gripper.py)                                               |
 | 设备工具脚本       | [scripts/camera_cmd.py](scripts/camera_cmd.py)                                     |
 | SDK 模块         | [scripts/](scripts/)                                                               |
-

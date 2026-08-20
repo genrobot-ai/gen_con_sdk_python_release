@@ -37,6 +37,7 @@ Before operating the gripper, observe the following:
 2. **Power Supply**: Error code -6.6 indicates unpowered motor. Connect 24V power to the XT30 connector.
 3. **Power Cycle Recalibration**: After power loss and restart, recalibration is required. Remove any objects from the gripper before power restoration.
 4. **Power Cycle Delay**: Wait at least 3 seconds after power-off before powering on the motor again. Avoid rapid power cycling to prevent motor damage.
+5. **Gripper Change Reinitialization**: After replacing the gripper with another model, power-cycle the USB serial port or the motor power interface. This ensures the gripper recalibrates the correct zero point.
 
 
 ## 3 Quick Start
@@ -265,4 +266,3 @@ Notes:
 | Main entry script     | [start_gripper.py](start_gripper.py)                                                     |
 | Device utility script | [scripts/camera_cmd.py](scripts/camera_cmd.py)                                           |
 | SDK modules           | [scripts/](scripts/)                                                                     |
-
