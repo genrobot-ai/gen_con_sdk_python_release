@@ -153,6 +153,8 @@ pip3 install -r requirements.txt
 
 ### 7.1 单爪启动
 
+`start_gripper.py` 是常驻运行的驱动程序。启动后会持续保持连接，持续推流摄像头/触觉/编码器数据，直到手动停止（Ctrl+C）为止。
+
 ```shell
 cd gen_con_sdk_python_release
 
@@ -190,7 +192,7 @@ python3 start_gripper.py left --camera-fps 60
 
 ### 7.3 设备工具命令
 
-使用 [scripts/camera_cmd.py](scripts/camera_cmd.py) 进行标定与设备 ID 查询，无需 ROS 或额外守护进程。
+使用 [scripts/camera_cmd.py](scripts/camera_cmd.py) 进行标定和设备 ID 查询。这是一个**一次性 CLI 工具**，与常驻运行的驱动程序（`start_gripper.py`）相互独立：它打开串口、发送单条命令后即退出，无需 ROS 或额外的守护进程。
 
 **单设备：**
 

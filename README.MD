@@ -154,6 +154,8 @@ Default serial symlinks after dual-gripper setup: `/dev/ttyDeviceLeft`, `/dev/tt
 
 ### 7.1 Single Gripper
 
+This is a runtime driver. It keeps the connection open, streams camera/tactile/encoder continuosly, and stays running until you stop it (Ctrl+C)
+
 ```shell
 cd gen_con_sdk_python_release
 
@@ -191,7 +193,7 @@ Six preview windows appear (three per gripper). Do **not** run multiple device u
 
 ### 7.3 Device Utilities
 
-Use [scripts/camera_cmd.py](scripts/camera_cmd.py) for calibration and device ID queries. No ROS or separate daemon required.
+Use [scripts/camera_cmd.py](scripts/camera_cmd.py) for calibration and device ID queries. This is a **one-shot CLI**, seperate fron the runtime driver. It opens the serial port, sends exactly one command, and exits.No ROS or separate daemon required.
 
 **Single device:**
 
